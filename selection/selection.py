@@ -4,10 +4,12 @@ import copy
 import random
 #轮盘赌选择法
 def selection(population, xReal):
+    # 计算xReal的概率 ->temp
     s=sum(xReal)
     temp=[k*1.0/s for k in xReal]
     temp2=[]
 
+    # 计算xReal的累积概率 ->temp2
     s2=0
     for k in temp:
         s2=s2+k
